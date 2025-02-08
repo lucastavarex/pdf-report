@@ -2,15 +2,24 @@ import json
 from fpdf import FPDF
 from datetime import datetime
 
+# Function to generate report ID
+def generate_report_id():
+    now = datetime.now()
+    code = f"{now.year}{str(now.month).zfill(2)}{str(now.day).zfill(2)}.{str(now.hour).zfill(2)}{str(now.minute).zfill(2)}{str(now.second).zfill(2)}{str(now.microsecond // 1000).zfill(3)}"
+    return code
+
 # Load data from JSON files
-with open("data.json", "r", encoding="utf-8") as file:
+with open("mock/data.json", "r", encoding="utf-8") as file:
     report_data = json.load(file)
 
-with open("params.json", "r", encoding="utf-8") as file:
+with open("mock/params.json", "r", encoding="utf-8") as file:
     params = json.load(file)
 
-with open("ranking.json", "r", encoding="utf-8") as file:
+with open("mock/ranking.json", "r", encoding="utf-8") as file:
     ranking = json.load(file)
+
+# Add generated report ID to params
+params['report_id'] = generate_report_id()
 
 # Custom PDF class to add header
 class CustomPDF(FPDF):
@@ -31,9 +40,9 @@ class CustomPDF(FPDF):
         self.cell(first_cell_width, first_line_height, '', border=1)
 
         # Add the first image (vertically centered)
-        self.image("logoPrefeitura.png", x=12, y=13 + y_offset, w=22)  # Adjust x, y, and width
+        self.image("assets/logoPrefeitura.png", x=12, y=13 + y_offset, w=22)  # Adjust x, y, and width
         # Add the second image (vertically centered)
-        self.image("logoCivitas.png", x=38, y=14 + y_offset, w=30)
+        self.image("assets/logoCivitas.png", x=38, y=14 + y_offset, w=30)
 
         # Second cell: Title
         remaining_width = self.w - first_cell_width - 2 * self.l_margin  # Total width - first cell width - margins
@@ -147,8 +156,13 @@ if ranking:
     pdf.set_font("Times")
     for row in ranking:
         pdf.set_x(horizontal_offset)  # Move to the calculated horizontal offset for each row
-        pdf.cell(40, 7, text=row["plate"], border=1, align="C")
-        pdf.cell(45, 7, text=str(row["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+        if row["plate"] == params["plate"]:
+            pdf.set_fill_color(255, 255, 0)  # Yellow background
+            fill = True
+        else:
+            fill = False
+        pdf.cell(40, 7, text=row["plate"], border=1, align="C", fill=fill)
+        pdf.cell(45, 7, text=str(row["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT", fill=fill)
 else:
     pdf.cell(0, 10, text="Nenhuma placa foi detectada mais de uma vez nesse relatório além da própria placa monitorada.", new_x="LMARGIN", new_y="NEXT")
 
@@ -202,16 +216,24 @@ for i, group in enumerate(report_data):
         # Table rows
         pdf.set_font("Times")
         for detection in group["detections"]:
-            pdf.cell(45, 7, text=format_date(detection["timestamp"]), border=1, align="C")
-            pdf.cell(25, 7, text=detection["plate"], border=1, align="C")
-            pdf.cell(25, 7, text=detection["camera_numero"], border=1, align="C")
-            pdf.cell(15, 7, text=detection["lane"], border=1, align="C")
-            pdf.cell(40, 7, text=str(detection["speed"]), border=1, align="C")
-            pdf.cell(40, 7, text=str(detection["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+            if detection["plate"] == params["plate"]:
+                pdf.set_fill_color(255, 255, 0)  # Yellow background
+                fill = True
+            else:
+                fill = False
+            pdf.cell(45, 7, text=format_date(detection["timestamp"]), border=1, align="C", fill=fill)
+            pdf.cell(25, 7, text=detection["plate"], border=1, align="C", fill=fill)
+            pdf.cell(25, 7, text=detection["camera_numero"], border=1, align="C", fill=fill)
+            pdf.cell(15, 7, text=detection["lane"], border=1, align="C", fill=fill)
+            pdf.cell(40, 7, text=str(detection["speed"]), border=1, align="C", fill=fill)
+            pdf.cell(40, 7, text=str(detection["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT", fill=fill)
     else:
         pdf.cell(0, 10, text="Nenhuma detecção encontrada para este grupo.", new_x="LMARGIN", new_y="NEXT")
 
-    pdf.ln(20)
+    # pdf.ln(10)
+    pdf.set_font("Times", size=10)
+    pdf.cell(0, 10, text=f"Tabela {i + 1}: Detecções conjuntas àquela de número {i + 1} da placa monitorada", new_x="LMARGIN", new_y="NEXT", align="C")
+    pdf.ln(10)
 
 # Save PDF
 pdf.output("output.pdf")

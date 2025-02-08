@@ -1,0 +1,1146 @@
+[
+  {
+    "radars": ["773 - 2", "773 - 1", "773 - 3"],
+    "start_time": "2025-02-07T10:02:35",
+    "end_time": "2025-02-07T10:06:35",
+    "location": "RUA CONDE DE BONFIM PROXIMO AO Nº 690 - SENTIDO ALTO DA BOA VISTA - TIJUCA",
+    "latitude": -22.932357001,
+    "longitude": -43.240830001,
+    "detection_time": "2025-02-07T10:04:35",
+    "total_detections": 18,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T10:04:03",
+        "plate": "ERG3C77",
+        "camera_numero": "773 - 2",
+        "lane": "2",
+        "speed": 17,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:05",
+        "plate": "ZRG3C77",
+        "camera_numero": "773 - 3",
+        "lane": "3",
+        "speed": 2,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:05",
+        "plate": "KRS4643",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 15,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:13",
+        "plate": "SRI1I20",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 24,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:15",
+        "plate": "LST7J14",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 25,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:16",
+        "plate": "KXJ1614",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 23,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:20",
+        "plate": "LMK8E16",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 26,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:25",
+        "plate": "IQP4B95",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 29,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:04:30",
+        "plate": "KOW2835",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 26,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:04:31",
+        "plate": "LPM2359",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 25,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:04:35",
+        "plate": "PPR1G10",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 25,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T10:04:36",
+        "plate": "RVB2F74",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 25,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:06:21",
+        "plate": "RMP8A05",
+        "camera_numero": "773 - 2",
+        "lane": "2",
+        "speed": 22,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:06:27",
+        "plate": "KRK7D42",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 28,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:06:28",
+        "plate": "KWY6C52",
+        "camera_numero": "773 - 2",
+        "lane": "2",
+        "speed": 22,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:06:29",
+        "plate": "SRO7C73",
+        "camera_numero": "773 - 1",
+        "lane": "1",
+        "speed": 27,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:06:30",
+        "plate": "KXB8A42",
+        "camera_numero": "773 - 2",
+        "lane": "2",
+        "speed": 23,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:06:33",
+        "plate": "KZR2860",
+        "camera_numero": "773 - 2",
+        "lane": "2",
+        "speed": 32,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["540191212", "540191213"],
+    "start_time": "2025-02-07T17:36:14",
+    "end_time": "2025-02-07T17:40:14",
+    "location": "AVENIDA DAS AMERICAS PROXIMO AO N° 700 - SENTIDO SANTA CRUZ - BARRA DA TIJUCA",
+    "latitude": -23.003707,
+    "longitude": -43.322281,
+    "detection_time": "2025-02-07T17:38:14",
+    "total_detections": 21,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T17:36:57",
+        "plate": "RKE2666",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 36,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:36:59",
+        "plate": "LSD9389",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 37,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:37:00",
+        "plate": "LTY8662",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 35,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:37:03",
+        "plate": "KYD8047",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 39,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:37:54",
+        "plate": "LRK5395",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 9,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:00",
+        "plate": "KYQ8889",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 17,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:03",
+        "plate": "RJC2465",
+        "camera_numero": "540191213",
+        "lane": "3",
+        "speed": 21,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:05",
+        "plate": "SRL0F72",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 14,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:11",
+        "plate": "SSE1477",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 19,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:14",
+        "plate": "PPR1G10",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 22,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T17:38:14",
+        "plate": "RTM5B80",
+        "camera_numero": "540191213",
+        "lane": "3",
+        "speed": 17,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:17",
+        "plate": "SBO6453",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 19,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:23",
+        "plate": "SRT9603",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 21,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:26",
+        "plate": "LII5D62",
+        "camera_numero": "540191213",
+        "lane": "3",
+        "speed": 28,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:27",
+        "plate": "SRL2653",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 31,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:30",
+        "plate": "SIZ0041",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 28,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:33",
+        "plate": "KRV5859",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 27,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:38",
+        "plate": "LTF2091",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 31,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:41",
+        "plate": "RLK5618",
+        "camera_numero": "540191213",
+        "lane": "3",
+        "speed": 44,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:43",
+        "plate": "RIW5630",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 41,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:38:46",
+        "plate": "RKU3821",
+        "camera_numero": "540191212",
+        "lane": "2",
+        "speed": 29,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["540171123", "540171122", "540171124"],
+    "start_time": "2025-02-07T21:37:34",
+    "end_time": "2025-02-07T21:41:34",
+    "location": "AVENIDA DAS AMERICAS PROXIMO AO Nº 2603 - SENTIDO SAO CONRADO - BARRA DA TIJUCA",
+    "latitude": -23.000834,
+    "longitude": -43.334711,
+    "detection_time": "2025-02-07T21:39:34",
+    "total_detections": 21,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T21:38:55",
+        "plate": "GBM3895",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 66,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:38:58",
+        "plate": "WWP5067",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 60,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:11",
+        "plate": "LSI9713",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 66,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:19",
+        "plate": "SHL2489",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 64,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:19",
+        "plate": "WXS8A10",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 67,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:24",
+        "plate": "SRA3492",
+        "camera_numero": "540171124",
+        "lane": "4",
+        "speed": 60,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:24",
+        "plate": "RJI7836",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 74,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:27",
+        "plate": "TJO5017",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 62,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:32",
+        "plate": "SYV3J78",
+        "camera_numero": "540171124",
+        "lane": "4",
+        "speed": 56,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:33",
+        "plate": "QPT7F32",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 75,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:34",
+        "plate": "PPR1G10",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 53,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T21:39:34",
+        "plate": "SRK8A29",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 68,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:38",
+        "plate": "LTY4H26",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 59,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:38",
+        "plate": "RJU2405",
+        "camera_numero": "540171124",
+        "lane": "4",
+        "speed": 64,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:43",
+        "plate": "LTN9669",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 76,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:43",
+        "plate": "LOY6418",
+        "camera_numero": "540171124",
+        "lane": "4",
+        "speed": 56,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:44",
+        "plate": "LIR5873",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 69,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:46",
+        "plate": "OYY3685",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 65,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:46",
+        "plate": "KYC9577",
+        "camera_numero": "540171123",
+        "lane": "3",
+        "speed": 74,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:48",
+        "plate": "LTY7178",
+        "camera_numero": "540171122",
+        "lane": "2",
+        "speed": 69,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T21:39:48",
+        "plate": "SYC0691",
+        "camera_numero": "540171124",
+        "lane": "4",
+        "speed": 63,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["7967 - 1", "7967 - 2"],
+    "start_time": "2025-02-07T10:05:58",
+    "end_time": "2025-02-07T10:09:58",
+    "location": "RUA CONDE DE BONFIM PROXIMO AO Nº 832 - SENTIDO ALTO DA BOA VISTA - TIJUCA",
+    "latitude": -22.935722,
+    "longitude": -43.2443056,
+    "detection_time": "2025-02-07T10:07:58",
+    "total_detections": 21,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T10:07:27",
+        "plate": "LCB7485",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 23,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:30",
+        "plate": "KVL6600",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 23,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:31",
+        "plate": "KWU7813",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 24,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:32",
+        "plate": "LPM2359",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 28,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:07:36",
+        "plate": "KOW2835",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 23,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:07:38",
+        "plate": "SQV9A51",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 20,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:40",
+        "plate": "RVB2F74",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 22,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T10:07:42",
+        "plate": "RJP4C36",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 15,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:46",
+        "plate": "LLJ1F85",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 18,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:50",
+        "plate": "QDY2J46",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 25,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:07:58",
+        "plate": "PPR1G10",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 21,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T10:08:03",
+        "plate": "LSF9677",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 25,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:11",
+        "plate": "HNM5624",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 26,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:12",
+        "plate": "RKP0C86",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 29,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:14",
+        "plate": "LUD9E09",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 24,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:15",
+        "plate": "LRQ2898",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 25,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:20",
+        "plate": "LKJ3C55",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:20",
+        "plate": "QFV7G66",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:25",
+        "plate": "LSC2B75",
+        "camera_numero": "7967 - 2",
+        "lane": "2",
+        "speed": 30,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:51",
+        "plate": "SRW5D84",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 39,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:08:57",
+        "plate": "LRX7759",
+        "camera_numero": "7967 - 1",
+        "lane": "1",
+        "speed": 35,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["8201 - 2"],
+    "start_time": "2025-02-07T10:43:56",
+    "end_time": "2025-02-07T10:47:56",
+    "location": "ESTRADA DO JOA PROXIMO AO Nº 2185 - SENTIDO BARRA - JOA",
+    "latitude": -23.007622,
+    "longitude": -43.286893,
+    "detection_time": "2025-02-07T10:45:56",
+    "total_detections": 4,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T10:44:48",
+        "plate": "TNB0I94",
+        "camera_numero": "8201 - 2",
+        "lane": "1",
+        "speed": 22,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:45:56",
+        "plate": "PPR1G10",
+        "camera_numero": "8201 - 2",
+        "lane": "1",
+        "speed": 21,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T10:46:12",
+        "plate": "SRH9J84",
+        "camera_numero": "8201 - 2",
+        "lane": "1",
+        "speed": 20,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T10:46:24",
+        "plate": "GEY3G44",
+        "camera_numero": "8201 - 2",
+        "lane": "1",
+        "speed": 25,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["590181111"],
+    "start_time": "2025-02-07T17:29:20",
+    "end_time": "2025-02-07T17:33:20",
+    "location": "ESTRADA DA BARRA DA TIJUCA PROXIMO AO Nº 436 - SENTIDO ITANHANGA - BARRA DA TIJUCA",
+    "latitude": -23.0085862746344,
+    "longitude": -43.3011567533117,
+    "detection_time": "2025-02-07T17:31:20",
+    "total_detections": 15,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T17:29:38",
+        "plate": "LUZ2017",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:30:46",
+        "plate": "RVG3F78",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 40,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:00",
+        "plate": "LLV7M92",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 39,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:05",
+        "plate": "LRT4917",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 39,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T17:31:20",
+        "plate": "PPR1G10",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 47,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T17:31:22",
+        "plate": "WOY9S21",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:25",
+        "plate": "RFJ5G17",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 41,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:44",
+        "plate": "ORM3E79",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 36,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:45",
+        "plate": "KYY7719",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 36,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:47",
+        "plate": "KYL8190",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:48",
+        "plate": "RJB2A53",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 33,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:49",
+        "plate": "SRY2E32",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 32,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:52",
+        "plate": "SRC4C07",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 34,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:31:57",
+        "plate": "KWR4G99",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 35,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:32:00",
+        "plate": "RKE2C60",
+        "camera_numero": "590181111",
+        "lane": "1",
+        "speed": 39,
+        "count": 2
+      }
+    ]
+  },
+  {
+    "radars": ["580521111", "580521113", "580521112"],
+    "start_time": "2025-02-07T22:14:17",
+    "end_time": "2025-02-07T22:18:17",
+    "location": "TUNEL REBOUCAS PROXIMO A SAIDA DA GALERIA COSME VELHO - SENTIDO CENTRO - ALTO DA BOA VISTA",
+    "latitude": -22.9392933,
+    "longitude": -43.2025218,
+    "detection_time": "2025-02-07T22:16:17",
+    "total_detections": 21,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T22:15:59",
+        "plate": "LUK4H61",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 52,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:01",
+        "plate": "RIV5053",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 57,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:02",
+        "plate": "LUO2608",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 56,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:02",
+        "plate": "KWL4966",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 59,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:07",
+        "plate": "LTQ8D20",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 50,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:09",
+        "plate": "LRK9136",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 51,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:10",
+        "plate": "KIW9226",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 50,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:11",
+        "plate": "TQQ8128",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 49,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:12",
+        "plate": "SIW8398",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 48,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:13",
+        "plate": "QQX9C49",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 51,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:17",
+        "plate": "PPR1G10",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 46,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T22:16:17",
+        "plate": "RJC6136",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 50,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:17",
+        "plate": "RJC6F36",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 7,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:18",
+        "plate": "KYX7C89",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 51,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:20",
+        "plate": "SRC6008",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 47,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:22",
+        "plate": "WNZ7216",
+        "camera_numero": "580521112",
+        "lane": "2",
+        "speed": 47,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:23",
+        "plate": "KZG9695",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 49,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:23",
+        "plate": "LPU1I39",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 45,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:25",
+        "plate": "LMJ4480",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 46,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:29",
+        "plate": "SRA2020",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 50,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T22:16:30",
+        "plate": "QWU9758",
+        "camera_numero": "580521113",
+        "lane": "3",
+        "speed": 43,
+        "count": 1
+      }
+    ]
+  },
+  {
+    "radars": ["8204 - 2"],
+    "start_time": "2025-02-07T17:26:39",
+    "end_time": "2025-02-07T17:30:39",
+    "location": "ESTRADA DO JOA PROXIMO AO Nº 3135 - SENTIDO BARRA - JOA",
+    "latitude": -23.008684,
+    "longitude": -43.291504,
+    "detection_time": "2025-02-07T17:28:39",
+    "total_detections": 10,
+    "detections": [
+      {
+        "timestamp": "2025-02-07T17:26:40",
+        "plate": "RJE9F44",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 27,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:27:26",
+        "plate": "LRT4917",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 25,
+        "count": 2
+      },
+      {
+        "timestamp": "2025-02-07T17:27:29",
+        "plate": "NRJ7E73",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 23,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:27:31",
+        "plate": "LTD1I35",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 21,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:28:13",
+        "plate": "SRS2J37",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 25,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:28:39",
+        "plate": "PPR1G10",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 24,
+        "count": 8
+      },
+      {
+        "timestamp": "2025-02-07T17:28:41",
+        "plate": "RKF3G16",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 22,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:29:08",
+        "plate": "KOY9221",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 24,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:29:37",
+        "plate": "KNH8E30",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 21,
+        "count": 1
+      },
+      {
+        "timestamp": "2025-02-07T17:29:50",
+        "plate": "RKE2C60",
+        "camera_numero": "8204 - 2",
+        "lane": "1",
+        "speed": 27,
+        "count": 2
+      }
+    ]
+  }
+]

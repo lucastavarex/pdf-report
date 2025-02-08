@@ -12,8 +12,41 @@ with open("params.json", "r", encoding="utf-8") as file:
 with open("ranking.json", "r", encoding="utf-8") as file:
     ranking = json.load(file)
 
+# Custom PDF class to add header
+class CustomPDF(FPDF):
+    def header(self):
+        # Set position
+        self.set_y(10)
+
+        # First row: Two cells (images + title)
+        self.set_font("Times", size=14)
+        
+        # First cell: Add two images
+        first_cell_width = 60  # Increased width of the first cell
+        first_line_height = 15  # Increased height of the first line to accommodate larger images
+        image_height = 18  # Increased height of the images
+        y_offset = (first_line_height - image_height) / 2  # Vertical offset to center the images
+
+        # Draw the placeholder cell
+        self.cell(first_cell_width, first_line_height, '', border=1)
+
+        # Add the first image (vertically centered)
+        self.image("logoPrefeitura.png", x=12, y=13 + y_offset, w=22)  # Adjust x, y, and width
+        # Add the second image (vertically centered)
+        self.image("logoCivitas.png", x=38, y=14 + y_offset, w=30)
+
+        # Second cell: Title
+        remaining_width = self.w - first_cell_width - 2 * self.l_margin  # Total width - first cell width - margins
+        self.set_xy(self.l_margin + first_cell_width, 10)  # Set position for the title
+        self.multi_cell(remaining_width, 15, "RELATÓRIO DE DETECÇÃO DE PLACAS CONJUNTAS", border=1, align="C")
+
+        # Second row: One cell (ID)
+        self.set_xy(self.l_margin, 10 + first_line_height)  # Set position for the ID
+        self.cell(0, 7, f"ID: {params.get('report_id', 'N/A')}", border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+        self.ln(5)
+
 # PDF setup
-pdf = FPDF()
+pdf = CustomPDF()
 pdf.add_page()
 pdf.set_font("Times", size=11)
 
@@ -67,9 +100,9 @@ def format_date(date_str):
     return date.strftime("%d/%m/%Y %H:%M:%S")
 
 # Cover page
-pdf.set_font("Times", size=18, style="B")
-pdf.cell(0, 10, text="RELATÓRIO DE DETECÇÃO DE PLACAS CONJUNTAS", new_x="LMARGIN", new_y="NEXT", align="C")
-pdf.ln(10)
+pdf.set_font("Times", size=18)
+pdf.cell(0, 10, text="Parâmetros Gerais", new_x="LMARGIN", new_y="NEXT", align="C")
+pdf.ln(5)
 
 pdf.set_font("Times", size=11)
 cover_params = [
@@ -87,34 +120,43 @@ cover_params = [
 ]
 
 for param in cover_params:
-    pdf.cell(0, 10, text=f"{param['label']} {param['value']}", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(0, 5, text=f"{param['label']} {param['value']}", new_x="LMARGIN", new_y="NEXT")
 
 pdf.ln(10)
 
 # Ranking section
-pdf.set_font("Times", size=18, style="B")
-pdf.cell(0, 10, text="Placas com mais de uma ocorrência", new_x="LMARGIN", new_y="NEXT", align="C")
+pdf.set_font("Times", size=18 )
+pdf.cell(0, 5, text="Placas com mais de uma ocorrência", new_x="LMARGIN", new_y="NEXT", align="C")
 pdf.ln(10)
 
 if ranking:
+    # Calculate the horizontal offset to center the table
+    table_width = 90  # 45 (Placa) + 45 (Nº de ocorrências)
+    page_width = pdf.w  # Get the page width
+    horizontal_offset = (page_width - table_width) / 2
+
+    # Move to the calculated horizontal offset
+    pdf.set_x(horizontal_offset)
+
     # Table headers
-    pdf.set_font("Times", style="B")
-    pdf.cell(45, 10, text="Placa", border=1, align="C")
-    pdf.cell(45, 10, text="Nº de ocorrências", border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("Times", style="B", size=10)
+    pdf.cell(40, 7, text="Placa", border=1, align="C")
+    pdf.cell(45, 7, text="Nº de ocorrências", border=1, align="C", new_x="LMARGIN", new_y="NEXT")
 
     # Table rows
     pdf.set_font("Times")
     for row in ranking:
-        pdf.cell(45, 10, text=row["plate"], border=1, align="C")
-        pdf.cell(45, 10, text=str(row["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+        pdf.set_x(horizontal_offset)  # Move to the calculated horizontal offset for each row
+        pdf.cell(40, 7, text=row["plate"], border=1, align="C")
+        pdf.cell(45, 7, text=str(row["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
 else:
     pdf.cell(0, 10, text="Nenhuma placa foi detectada mais de uma vez nesse relatório além da própria placa monitorada.", new_x="LMARGIN", new_y="NEXT")
 
-pdf.ln(20)
+pdf.ln(10)
 
 # Detection groups
 for i, group in enumerate(report_data):
-    pdf.set_font("Times", size=18, style="B")
+    pdf.set_font("Times", size=18)
     if len(report_data) > 1:
         pdf.cell(0, 10, text=f"Detecção {i + 1} da placa monitorada", new_x="LMARGIN", new_y="NEXT", align="C")
     else:
@@ -142,30 +184,30 @@ for i, group in enumerate(report_data):
     ]
 
     for param in detection_params:
-        pdf.cell(0, 10, text=f"{param['label']} {param['value']}", new_x="LMARGIN", new_y="NEXT")
+        pdf.multi_cell(0, 5, text=f"{param['label']} {param['value']}", new_x="LMARGIN", new_y="NEXT")
 
     pdf.ln(10)
 
     # Detections table
     if group["detections"]:
         # Table headers
-        pdf.set_font("Times", style="B")
-        pdf.cell(45, 10, text="Data e Hora", border=1, align="C")
-        pdf.cell(30, 10, text="Placa", border=1, align="C")
-        pdf.cell(30, 10, text="Radar", border=1, align="C")
-        pdf.cell(20, 10, text="Faixa", border=1, align="C")
-        pdf.cell(40, 10, text="Velocidade [Km/h]", border=1, align="C")
-        pdf.cell(40, 10, text="Nº de ocorrências", border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+        pdf.set_font("Times", style="B", size=10)
+        pdf.cell(45, 7, text="Data e Hora", border=1, align="C")
+        pdf.cell(25, 7, text="Placa", border=1, align="C")
+        pdf.cell(25, 7, text="Radar", border=1, align="C")
+        pdf.cell(15, 7, text="Faixa", border=1, align="C")
+        pdf.cell(40, 7, text="Velocidade [Km/h]", border=1, align="C")
+        pdf.cell(40, 7, text="Nº de ocorrências", border=1, align="C", new_x="LMARGIN", new_y="NEXT")
 
         # Table rows
         pdf.set_font("Times")
         for detection in group["detections"]:
-            pdf.cell(45, 10, text=format_date(detection["timestamp"]), border=1, align="C")
-            pdf.cell(30, 10, text=detection["plate"], border=1, align="C")
-            pdf.cell(30, 10, text=detection["camera_numero"], border=1, align="C")
-            pdf.cell(20, 10, text=detection["lane"], border=1, align="C")
-            pdf.cell(40, 10, text=str(detection["speed"]), border=1, align="C")
-            pdf.cell(40, 10, text=str(detection["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
+            pdf.cell(45, 7, text=format_date(detection["timestamp"]), border=1, align="C")
+            pdf.cell(25, 7, text=detection["plate"], border=1, align="C")
+            pdf.cell(25, 7, text=detection["camera_numero"], border=1, align="C")
+            pdf.cell(15, 7, text=detection["lane"], border=1, align="C")
+            pdf.cell(40, 7, text=str(detection["speed"]), border=1, align="C")
+            pdf.cell(40, 7, text=str(detection["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT")
     else:
         pdf.cell(0, 10, text="Nenhuma detecção encontrada para este grupo.", new_x="LMARGIN", new_y="NEXT")
 

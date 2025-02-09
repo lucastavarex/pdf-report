@@ -108,7 +108,93 @@ def format_date(date_str):
             return date_str
     return date.strftime("%d/%m/%Y %H:%M:%S")
 
-# Cover page
+# Disclaimer Section
+pdf.set_font("Times", size=18)
+pdf.cell(0, 4, text="Informações gerais sobre o relatório", new_x="LMARGIN", new_y="NEXT", align="C")
+pdf.ln(3)
+
+pdf.set_font("Times", style="B", size=12)
+pdf.cell(0, 5, text="Estrutura do relatório", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text="O relatório identifica placas de veículos que passaram junto a uma placa principal monitorada (Placas conjuntas). A identificação é feita dentro de um intervalo de tempo determinado pela investigação a partir dos parâmetros de busca no sistema. O relatório também aponta a frequência com que as placas conjuntas foram detectadas junto à placa principal monitorada. A apresentação do resultado se dá por ordem decrescente de passagens conjuntas. Este documento é gerado automaticamente pelo sistema, sem interferência humana. Todo esse documento é auditável.")
+pdf.ln(2)
+
+pdf.set_font("Times", style="B", size=12)
+pdf.cell(0, 5, text="Parâmetros de busca", new_x="LMARGIN", new_y="NEXT")
+pdf.ln(1)
+
+pdf.set_font("Times", style="B", size=10)
+pdf.cell(0, 5, text="Intervalo de tempo", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text="As buscas por placas conjuntas podem ser feitas até cinco minutos antes e cinco minutos depois da passagem da placa principal monitorada. A escolha dos parâmetros é feita pelo solicitante da informação. Quando não há informação sobre o período de busca na solicitação, o operador da Civitas utiliza o intervalo padrão definido nas diretrizes operacionais internas (três minutos antes e três minutos depois e de até 50 placas).")
+pdf.ln(1)
+
+pdf.set_font("Times", style="B", size=10)
+pdf.cell(0, 5, text="Quantidade de placas conjuntas por buscas", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text="São identificadas no máximo 50 placas antes e 50 placas depois da placa principal monitorada.")
+pdf.ln(2)
+
+pdf.set_font("Times", style="B", size=12)
+pdf.cell(0, 5, text="Radares e localização", new_x="LMARGIN", new_y="NEXT")
+pdf.ln(1)
+
+pdf.set_font("Times", size=10)
+bullet_points = [
+    "Cada radar possui um número identificador próprio. Todas as detecções feitas pelo sistema apontam o número identificador do equipamento que fez a leitura.",
+    "Cada radar possui também informações de localização que incluem coordenadas geográficas e endereços completos. Essas informações também estão disponíveis junto a cada registro.",
+    "O sentido de circulação da via é fornecido, salvo quando há indisponibilidade da informação no banco de dados."
+]
+
+for point in bullet_points:
+    pdf.multi_cell(0, 5, text=f"{chr(149)} {point}")
+    pdf.ln(1)
+pdf.ln(2)
+
+pdf.set_font("Times", style="B", size=12)
+pdf.cell(0, 5, text="Como ler o relatório", new_x="LMARGIN", new_y="NEXT")
+pdf.ln(1)
+
+pdf.set_font("Times", size=10)
+bullet_points = [
+    "O relatório é disposto em duas partes. Na primeira parte, consta um ranking com a frequência com que cada placa conjunta aparece junto à placa monitorada durante o tempo determinado nas buscas. Nesta parte, as placas são classificadas de forma decrescente a partir da quantidade de vezes que passavam junto à placa monitorada.",
+    "A segunda parte é composta por tabelas que apresentam em ordem cronológica todas as placas detectadas que passaram antes e depois da placa principal monitorada por grupo de radar.",
+    "O relatório apresenta tabelas com linhas e colunas. A linha grifada em amarelo representa a placa principal monitorada na qual pretende-se buscar as placas conjuntas.",
+    "Ao lado da listagem com cada placa, na coluna à direita, é apresentado a quantidade de vezes (ocorrências) que cada placa foi registrada em conjunto com a placa monitorada."
+]
+
+for point in bullet_points:
+    pdf.multi_cell(0, 5, text=f"{chr(149)} {point}")
+    pdf.ln(1)
+
+pdf.ln(2)
+
+pdf.set_font("Times", style="B", size=12)
+pdf.cell(0, 5, text="Limitações do relatório", new_x="LMARGIN", new_y="NEXT")
+pdf.ln(1)
+
+pdf.set_font("Times", style="B", size=10)
+pdf.cell(0, 5, text="Período disponível", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text="A base de dados dos Sistema conta com um histórico de detecções a partir da data de 01/06/2024. Não é possível realizar buscas a períodos anteriores.")
+pdf.ln(1)
+
+pdf.set_font("Times", style="B", size=10)
+pdf.cell(0, 5, text="Ausência de detecção", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text=f"{chr(149)} A falta de registro de uma placa não significa, necessariamente, que o veículo não passou pelo local. A leitura de OCR pode ser inviabilizada em algumas circunstâncias, tais como: mau estado de conservação das placas, objetos obstruindo as câmeras de leitura, condições climáticas, período de inatividade do equipamento entre outros.")
+pdf.ln(1)
+pdf.multi_cell(0, 5, text=f"{chr(149)} O relatório não é exaustivo e a falta de registro de uma determinada placa não é determinante para comprovar que não houve a passagem naquela localidade.")
+
+pdf.ln(1)
+
+pdf.set_font("Times", style="B", size=10)
+pdf.cell(0, 5, text="Distância entre radares", new_x="LMARGIN", new_y="NEXT")
+pdf.set_font("Times", size=10)
+pdf.multi_cell(0, 5, text="O relatório não indica trajetos percorridos entre as detecções.")
+
+pdf.ln(10)
+
 pdf.set_font("Times", size=18)
 pdf.cell(0, 10, text="Parâmetros Gerais", new_x="LMARGIN", new_y="NEXT", align="C")
 pdf.ln(5)
@@ -158,9 +244,11 @@ if ranking:
         pdf.set_x(horizontal_offset)  # Move to the calculated horizontal offset for each row
         if row["plate"] == params["plate"]:
             pdf.set_fill_color(255, 255, 0)  # Yellow background
+            pdf.set_font('', 'B') 
             fill = True
         else:
             fill = False
+            pdf.set_font('', '') 
         pdf.cell(40, 7, text=row["plate"], border=1, align="C", fill=fill)
         pdf.cell(45, 7, text=str(row["count"]), border=1, align="C", new_x="LMARGIN", new_y="NEXT", fill=fill)
 else:
@@ -175,7 +263,7 @@ for i, group in enumerate(report_data):
         pdf.cell(0, 10, text=f"Detecção {i + 1} da placa monitorada", new_x="LMARGIN", new_y="NEXT", align="C")
     else:
         pdf.cell(0, 10, text="Detecção única da placa monitorada", new_x="LMARGIN", new_y="NEXT", align="C")
-    pdf.ln(10)
+    pdf.ln(5)
 
     # Group parameters
     pdf.set_font("Times", size=11)
@@ -218,9 +306,11 @@ for i, group in enumerate(report_data):
         for detection in group["detections"]:
             if detection["plate"] == params["plate"]:
                 pdf.set_fill_color(255, 255, 0)  # Yellow background
+                pdf.set_font('', 'B') 
                 fill = True
             else:
                 fill = False
+                pdf.set_font('', '') 
             pdf.cell(45, 7, text=format_date(detection["timestamp"]), border=1, align="C", fill=fill)
             pdf.cell(25, 7, text=detection["plate"], border=1, align="C", fill=fill)
             pdf.cell(25, 7, text=detection["camera_numero"], border=1, align="C", fill=fill)
@@ -233,7 +323,7 @@ for i, group in enumerate(report_data):
     # pdf.ln(10)
     pdf.set_font("Times", size=10)
     pdf.cell(0, 10, text=f"Tabela {i + 1}: Detecções conjuntas àquela de número {i + 1} da placa monitorada", new_x="LMARGIN", new_y="NEXT", align="C")
-    pdf.ln(10)
+    pdf.ln(4)
 
 # Save PDF
 pdf.output("output.pdf")

@@ -59,41 +59,6 @@ pdf = CustomPDF()
 pdf.add_page()
 pdf.set_font("Times", size=11)
 
-# Styles
-styles = {
-    "page": {
-        "padding_horizontal": 30,
-        "padding_vertical": 40,
-    },
-    "group_title": {
-        "font_size": 18,
-        "font_style": "B",
-        "align": "C",
-        "padding_top": 20,
-    },
-    "table_header": {
-        "font_style": "B",
-        "align": "C",
-        "border": 1,
-        "padding_top": 2,
-    },
-    "table_data": {
-        "align": "C",
-        "border": 1,
-        "padding_top": 2,
-    },
-    "params_container": {
-        "margin_top": 12,
-        "margin_bottom": 18,
-    },
-    "params_row": {
-        "gap": 4,
-    },
-    "params_label": {
-        "font_style": "B",
-    },
-}
-
 # Helper function to format date
 def format_date(date_str):
     try:

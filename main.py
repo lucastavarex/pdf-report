@@ -1,6 +1,6 @@
 import json
 from fpdf import FPDF
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 # Function to generate report ID
 def generate_report_id():
@@ -72,6 +72,26 @@ def format_date(date_str):
             # If both fail, return the original string
             return date_str
     return date.strftime("%d/%m/%Y %H:%M:%S")
+
+# Helper function to format date UTC
+def format_date_UTC(date_str):
+    try:
+        # Try parsing with milliseconds and 'Z' suffix
+        date = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S.%fZ")
+    except ValueError:
+        try:
+            # Try parsing without milliseconds and 'Z' suffix
+            date = datetime.strptime(date_str, "%Y-%m-%dT%H:%M:%S")
+        except ValueError:
+            # If both fail, return the original string
+            return date_str
+    
+    # Convert the date to UTC-3
+    utc_date = date.replace(tzinfo=timezone.utc)  # Assume the input date is in UTC
+    utc_minus_3 = utc_date.astimezone(timezone(timedelta(hours=-3)))  # Convert to UTC-3
+    
+    # Format the date as desired
+    return utc_minus_3.strftime("%d/%m/%Y %H:%M:%S")
 
 # Disclaimer Section
 pdf.set_font("Times", size=18)
@@ -169,7 +189,7 @@ cover_params = [
     {"label": "Placa monitorada:", "value": params["plate"]},
     {
         "label": "Período analisado:",
-        "value": f"De {format_date(params['startTime'])} até {format_date(params['endTime'])}",
+        "value": f"De {format_date_UTC(params['startTime'])} até {format_date_UTC(params['endTime'])}",
     },
     {"label": "Limite de placas antes e depois:", "value": params["nPlates"]},
     {"label": "Total de detecções da placa monitorada:", "value": len(report_data)},
